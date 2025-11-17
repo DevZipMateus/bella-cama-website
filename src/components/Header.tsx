@@ -29,7 +29,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <button onClick={() => scrollToSection("hero")} className="flex items-center space-x-2 transition-transform hover:scale-105">
-            <img src={logo} alt="Lacasabella Store" className="h-24 w-auto" />
+            <img src={logo} alt="Lacasabella Store" className="h-16 sm:h-20 md:h-24 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
