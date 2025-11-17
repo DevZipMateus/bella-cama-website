@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  const isVitrinePage = location.pathname === "/vitrine";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -13,17 +18,34 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-      setIsMobileMenuOpen(false);
+    // Se estiver na página vitrine, primeiro navegar para home
+    if (isVitrinePage) {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      }
     }
+    setIsMobileMenuOpen(false);
   };
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black/95 backdrop-blur-md shadow-lg" : "bg-black/80 backdrop-blur-sm"}`}>
       <div className="container mx-auto px-4">
@@ -39,6 +61,9 @@ const Header = () => {
             </button>
             <button onClick={() => scrollToSection("produtos")} className="text-white hover:text-primary transition-colors font-medium">
               Produtos
+            </button>
+            <button onClick={() => navigate("/vitrine")} className="text-white hover:text-primary transition-colors font-medium">
+              Vitrine
             </button>
             <button onClick={() => scrollToSection("contato")} className="text-white hover:text-primary transition-colors font-medium">
               Contato
@@ -62,6 +87,9 @@ const Header = () => {
               </button>
               <button onClick={() => scrollToSection("produtos")} className="text-white hover:text-primary transition-colors font-medium text-left">
                 Produtos
+              </button>
+              <button onClick={() => { navigate("/vitrine"); setIsMobileMenuOpen(false); }} className="text-white hover:text-primary transition-colors font-medium text-left">
+                Vitrine
               </button>
               <button onClick={() => scrollToSection("contato")} className="text-white hover:text-primary transition-colors font-medium text-left">
                 Contato
