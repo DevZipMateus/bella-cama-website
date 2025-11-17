@@ -1,14 +1,12 @@
 import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-black border-t border-white/10">
+  return <footer className="bg-black border-t border-white/10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo e Descrição */}
           <div className="space-y-4">
-            <img src={logo} alt="Lacasabella Store" className="h-16 w-auto" />
+            <img src={logo} alt="Lacasabella Store" className="h-28 w-auto" />
             <p className="text-sm text-white/70">
               Conforto e elegância para sua casa
             </p>
@@ -18,28 +16,15 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Contato</h3>
             <div className="space-y-3">
-              <a
-                href="https://wa.me/5534992681388"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors"
-              >
+              <a href="https://wa.me/5534992681388" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
                 (34) 99268-1388
               </a>
-              <a
-                href="https://wa.me/5534991370847"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors"
-              >
+              <a href="https://wa.me/5534991370847" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
                 (34) 99137-0847
               </a>
-              <a
-                href="mailto:lacasabellastore@gmail.com"
-                className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors"
-              >
+              <a href="mailto:lacasabellastore@gmail.com" className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
                 lacasabellastore@gmail.com
               </a>
@@ -67,12 +52,7 @@ const Footer = () => {
           {/* Redes Sociais */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Redes Sociais</h3>
-            <a
-              href="https://www.instagram.com/lacasabellastore?igsh=dXYzejJ5aDN3bHZl&utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors"
-            >
+            <a href="https://www.instagram.com/lacasabellastore?igsh=dXYzejJ5aDN3bHZl&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/70 hover:text-primary transition-colors">
               <Instagram className="w-5 h-5" />
               @lacasabellastore
             </a>
@@ -89,8 +69,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
