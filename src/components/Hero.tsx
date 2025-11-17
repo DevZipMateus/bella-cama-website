@@ -1,15 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
-      style={{
-        background: "var(--gradient-hero)",
-      }}
     >
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+        }}
+      />
+      
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+      
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
