@@ -18,19 +18,12 @@ const Vitrine = () => {
     // Travar scroll da página
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
-
-    // Carregar o script do MonteSite
-    const script = document.createElement("script");
-    script.src = "https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe";
-    script.async = true;
-    document.body.appendChild(script);
     
     return () => {
       window.removeEventListener("resize", calculateHeight);
       // Restaurar scroll ao sair da página
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
-      document.body.removeChild(script);
     };
   }, []);
 
@@ -48,8 +41,6 @@ const Vitrine = () => {
           title="Demonstração de Vitrine"
         />
       </main>
-      {/* Rodapé MonteSite - Atualização Automática */}
-      <div id="montesite-footer-badge"></div>
     </div>
   );
 };
