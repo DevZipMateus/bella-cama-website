@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-black/95 backdrop-blur-md shadow-lg" : "bg-black/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -48,19 +48,19 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("sobre")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-white hover:text-primary transition-colors font-medium"
             >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection("produtos")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-white hover:text-primary transition-colors font-medium"
             >
               Produtos
             </button>
             <button
               onClick={() => scrollToSection("contato")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-white hover:text-primary transition-colors font-medium"
             >
               Contato
             </button>
@@ -76,7 +76,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="md:hidden text-white hover:text-primary transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -84,23 +84,23 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
+          <nav className="md:hidden py-4 border-t border-white/20">
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection("sobre")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-white hover:text-primary transition-colors font-medium text-left"
               >
                 Sobre
               </button>
               <button
                 onClick={() => scrollToSection("produtos")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-white hover:text-primary transition-colors font-medium text-left"
               >
                 Produtos
               </button>
               <button
                 onClick={() => scrollToSection("contato")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-white hover:text-primary transition-colors font-medium text-left"
               >
                 Contato
               </button>
