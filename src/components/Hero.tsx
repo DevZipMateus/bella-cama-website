@@ -29,21 +29,21 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 animate-fade-in bg-black/60 backdrop-blur-sm rounded-2xl p-8 sm:p-12 shadow-2xl">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full border border-primary/20">
             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary" />
-            <span className="text-xs sm:text-sm font-medium text-primary">
+            <span className="text-xs sm:text-sm font-medium text-white">
               Elegância e conforto para o seu lar
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight px-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight px-2">
             Lacasabella Store
           </h1>
 
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-2xl mx-auto px-4">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto px-4">
             Oferecemos produtos de cama, mesa e banho que unem qualidade, conforto e sofisticação,
             promovendo bem-estar e elegância no dia a dia
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-foreground/80 font-medium">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 font-medium">
             Conforto e elegância para sua casa
           </p>
 
