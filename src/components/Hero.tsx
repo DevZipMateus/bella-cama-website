@@ -56,20 +56,12 @@ const Hero = () => {
               Entre em contato
             </Button>
             <Button
-              onClick={() => {
-                const element = document.getElementById("produtos");
-                if (element) {
-                  const headerOffset = 80;
-                  const elementPosition = element.getBoundingClientRect().top;
-                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                  window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-                }
-              }}
+              onClick={() => window.location.href = "/vitrine"}
               size="lg"
               variant="outline"
               className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 border-primary/60 text-foreground hover:bg-primary/10 hover:border-primary transition-all w-full sm:w-auto"
             >
-              Conheça nossos produtos
+              Ver vitrine virtual
             </Button>
           </div>
         </div>
