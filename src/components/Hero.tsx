@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight px-2">
-            Lacasabella Store
+            La Casa Bella
           </h1>
 
           <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto px-4">
