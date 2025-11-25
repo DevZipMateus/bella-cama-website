@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-start gap-2 text-sm text-white/70">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Avenida Fernando Vilela - 1177</span>
+                <span>Avenida Fernando Vilela 1177<br />Bairro Osvaldo Rezende - Uberlândia - MG</span>
               </div>
               <div className="flex items-start gap-2 text-sm text-white/70">
                 <Clock className="w-4 h-4 mt-1 flex-shrink-0" />
