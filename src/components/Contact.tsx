@@ -18,7 +18,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Endereço",
-      content: ["Avenida Fernando Vilela - 1177"],
+      content: ["Avenida Fernando Vilela 1177", "Bairro Osvaldo Rezende - Uberlândia - MG"],
     },
     {
       icon: Clock,
