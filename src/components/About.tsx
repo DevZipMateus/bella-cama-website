@@ -24,10 +24,10 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-            Sobre a Lacasabella
+            Sobre La Casa Bella
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-2">
-            Na Lacasabella Store, acreditamos que cada ambiente da sua casa merece cuidado e
+            Na La Casa Bella, acreditamos que cada ambiente da sua casa merece cuidado e
             atenção especial. Oferecemos uma seleção exclusiva de produtos de cama, mesa e banho
             que combinam qualidade excepcional com design sofisticado.
           </p>
